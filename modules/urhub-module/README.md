@@ -10,8 +10,8 @@
     * Install AWS Cli.
     * Open terminal:
         1. Run list-buckets command to list all buckets name.
-            aws s3api list-buckets --query 'Buckets[*].Name'
+            `aws s3api list-buckets --query 'Buckets[*].Name'`
         2. Run get-bucket-versioning command to see Versioning and MFADelete status
-            aws s3api get-bucket-versioning --bucket **bucket-name**
-        3. Run put-bucket-versioning command to enable versioning and MFA delete for the selected bucket
-            aws s3api put-bucket-versioning --bucket **bucket-name** --versioning-configuration '{"MFADelete":"Enabled","Status":"Enabled"}' --mfa 'arn:aws:iam::**aws_account_id**:mfa/root-account-mfa-device **passcode**'
+            `aws s3api get-bucket-versioning --bucket **bucket-name**`
+        4. Run put-bucket-versioning command to enable versioning and MFA delete for the selected bucket
+            `aws s3api put-bucket-versioning --bucket **bucket-name** --versioning-configuration '{"MFADelete":"Enabled","Status":"Enabled"}' --mfa 'arn:aws:iam::**aws_account_id**:mfa/root-account-mfa-device **passcode**'`
